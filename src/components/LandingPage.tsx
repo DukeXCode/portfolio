@@ -77,7 +77,7 @@ const LandingPage = () => {
         <div className="mx-auto max-w-4xl">
           <div className="flex items-center justify-between pt-8 mt-8 border-t border-gray-800">
             <div className="font-mono text-gray-400">
-              Made with 💜 using React & Tailwind
+              Made React & Tailwind CSS
             </div>
             <Terminal className="w-5 h-5 text-purple-500"/>
           </div>
