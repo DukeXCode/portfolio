@@ -9,11 +9,13 @@ const LandingPage = () => {
       <nav className="flex items-center justify-between p-6">
         <div className="font-mono text-xl text-purple-500">&gt; dukex</div>
         <div className="flex gap-4">
-          <a href="https://github.com/DukeXCode" className="p-2 text-gray-400 rounded-lg hover:text-purple-400 hover:bg-gray-800">
-            <SiGithub className="w-5 h-5" />
+          <a href="https://github.com/DukeXCode"
+             className="p-2 text-gray-400 rounded-lg hover:text-purple-400 hover:bg-gray-800">
+            <SiGithub className="w-5 h-5"/>
           </a>
-          <a href="mailto:naim.giger@outlook.com" className="p-2 text-gray-400 rounded-lg hover:text-purple-400 hover:bg-gray-800">
-            <Mail className="w-5 h-5" />
+          <a href="mailto:naim.giger@outlook.com"
+             className="p-2 text-gray-400 rounded-lg hover:text-purple-400 hover:bg-gray-800">
+            <Mail className="w-5 h-5"/>
           </a>
         </div>
       </nav>
@@ -40,7 +42,7 @@ const LandingPage = () => {
           </h2>
           <div className="grid gap-6">
             {projects.map((project, index) => (
-              <ProjectCard key={index} project={project} />
+              <ProjectCard key={index} project={project}/>
             ))}
           </div>
         </div>
@@ -59,7 +61,7 @@ const LandingPage = () => {
                 <ul className="mt-2 space-y-1 text-gray-300">
                   {category.items.map((item, itemIndex) => (
                     <li key={itemIndex} className="flex items-center gap-2">
-                      <Code className="w-4 h-4 text-gray-500" />
+                      <Code className="w-4 h-4 text-gray-500"/>
                       {item}
                     </li>
                   ))}
@@ -77,7 +79,7 @@ const LandingPage = () => {
             <div className="font-mono text-gray-400">
               Made with 💜 using React & Tailwind
             </div>
-            <Terminal className="w-5 h-5 text-purple-500" />
+            <Terminal className="w-5 h-5 text-purple-500"/>
           </div>
         </div>
       </footer>
