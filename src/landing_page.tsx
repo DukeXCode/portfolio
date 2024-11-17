@@ -124,13 +124,6 @@ const projects = [
     github: "https://github.com/jzelAdmin2006/Hackathon2023-CloudCondense",
     demo: "#"
   },
-  {
-    name: "Analytics Dashboard",
-    description: "Real-time analytics dashboard with customizable metrics and alerts.",
-    tech: ["React", "GraphQL", "TimescaleDB", "WebSocket"],
-    github: "#",
-    demo: "#"
-  }
 ];
 
 const skills = [
