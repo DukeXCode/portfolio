@@ -88,6 +88,8 @@ const LandingPage = () => {
 };
 
 // Data
+
+// Using an empty string as github or demo automatically hides the icon
 const projects: Project[] = [
   {
     name: "Flag Quiz",
