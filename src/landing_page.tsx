@@ -124,6 +124,13 @@ const projects = [
     github: "https://github.com/jzelAdmin2006/Hackathon2023-CloudCondense",
     demo: "#"
   },
+  {
+    name: "Portfolio",
+    description: "The site your currently looking at",
+    tech: ["React", "TypeScript", "Tailwind CSS"],
+    github: "https://github.com/DukeXCode/portfolio",
+    demo: "#"
+  }
 ];
 
 const skills = [
