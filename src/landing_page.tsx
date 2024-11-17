@@ -1,4 +1,5 @@
-import { Github, Twitter, Code, ExternalLink, Mail, Terminal } from 'lucide-react';
+import { Code, ExternalLink, Mail, Terminal } from 'lucide-react';
+import {SiGithub, SiX} from "@icons-pack/react-simple-icons";
 
 const LandingPage = () => {
   return (
@@ -8,10 +9,10 @@ const LandingPage = () => {
         <div className="font-mono text-xl text-purple-500">&gt; dukex</div>
         <div className="flex gap-4">
           <a href="https://github.com" className="p-2 text-gray-400 rounded-lg hover:text-purple-400 hover:bg-gray-800">
-            <Github className="w-5 h-5" />
+            <SiGithub className="w-5 h-5" />
           </a>
           <a href="https://twitter.com" className="p-2 text-gray-400 rounded-lg hover:text-purple-400 hover:bg-gray-800">
-            <Twitter className="w-5 h-5" />
+            <SiX className="w-5 h-5" />
           </a>
           <a href="mailto:hello@dukex.dev" className="p-2 text-gray-400 rounded-lg hover:text-purple-400 hover:bg-gray-800">
             <Mail className="w-5 h-5" />
@@ -51,7 +52,7 @@ const LandingPage = () => {
                   </div>
                   <div className="flex gap-3">
                     <a href={project.github} className="text-gray-400 hover:text-purple-400">
-                      <Github className="w-5 h-5" />
+                      <SiGithub className="w-5 h-5" />
                     </a>
                     <a href={project.demo} className="text-gray-400 hover:text-purple-400">
                       <ExternalLink className="w-5 h-5" />
