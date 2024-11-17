@@ -1,5 +1,5 @@
-import { Code, ExternalLink, Mail, Terminal } from 'lucide-react';
-import {SiGithub, SiX} from "@icons-pack/react-simple-icons";
+import {Code, ExternalLink, Mail, Terminal} from 'lucide-react';
+import {SiGithub} from "@icons-pack/react-simple-icons";
 
 const LandingPage = () => {
   return (
@@ -8,13 +8,10 @@ const LandingPage = () => {
       <nav className="flex items-center justify-between p-6">
         <div className="font-mono text-xl text-purple-500">&gt; dukex</div>
         <div className="flex gap-4">
-          <a href="https://github.com" className="p-2 text-gray-400 rounded-lg hover:text-purple-400 hover:bg-gray-800">
+          <a href="https://github.com/DukeXCode" className="p-2 text-gray-400 rounded-lg hover:text-purple-400 hover:bg-gray-800">
             <SiGithub className="w-5 h-5" />
           </a>
-          <a href="https://twitter.com" className="p-2 text-gray-400 rounded-lg hover:text-purple-400 hover:bg-gray-800">
-            <SiX className="w-5 h-5" />
-          </a>
-          <a href="mailto:hello@dukex.dev" className="p-2 text-gray-400 rounded-lg hover:text-purple-400 hover:bg-gray-800">
+          <a href="mailto:naim.giger@outlook.com" className="p-2 text-gray-400 rounded-lg hover:text-purple-400 hover:bg-gray-800">
             <Mail className="w-5 h-5" />
           </a>
         </div>
@@ -25,11 +22,11 @@ const LandingPage = () => {
         <div className="space-y-6">
           <div className="font-mono text-purple-400">~/portfolio $</div>
           <h1 className="text-4xl font-bold text-white">
-            Full Stack Developer
+            Naïm Giger
           </h1>
           <p className="text-xl text-gray-300">
             Building scalable applications with modern tech stacks.
-            Currently working with TypeScript, React, Node.js, and PostgreSQL.
+            Currently working with TypeScript, React and Node.js.
           </p>
         </div>
       </div>
@@ -72,14 +69,14 @@ const LandingPage = () => {
         </div>
       </div>
 
-      {/* Tech Stack Section */}
+      {/* Skills Section */}
       <div className="px-6 py-12">
         <div className="mx-auto max-w-4xl">
           <h2 className="mb-8 font-mono text-2xl text-white">
-            ~/stack $
+            ~/skills $
           </h2>
           <div className="grid grid-cols-2 gap-6 md:grid-cols-3">
-            {techStack.map((category, index) => (
+            {skills.map((category, index) => (
               <div key={index} className="p-4 bg-gray-800 rounded-lg">
                 <h3 className="text-lg font-semibold text-purple-400">{category.name}</h3>
                 <ul className="mt-2 space-y-1 text-gray-300">
@@ -114,17 +111,17 @@ const LandingPage = () => {
 // Data
 const projects = [
   {
-    name: "API Gateway",
-    description: "High-performance API gateway with real-time monitoring and rate limiting.",
-    tech: ["Go", "Redis", "Docker", "Prometheus"],
+    name: "Flag Quiz",
+    description: "Improve you flag knowledge with a intelligent quiz",
+    tech: ["Angular", "TypeScript", "Supabase", "Docker", "Nginx"],
     github: "#",
-    demo: "#"
+    demo: "https://flag-quiz.dukex.ch/"
   },
   {
-    name: "Task Runner",
-    description: "Distributed task processing system with fault tolerance and retry mechanisms.",
-    tech: ["TypeScript", "Node.js", "RabbitMQ", "PostgreSQL"],
-    github: "#",
+    name: "Cloud Condense",
+    description: "Elegant solution for saving cloud storage developed at a hackathon",
+    tech: ["Vue", "TypeScript", "Java", "Spring Boot", "Microsoft SQL", "Docker"],
+    github: "https://github.com/jzelAdmin2006/Hackathon2023-CloudCondense",
     demo: "#"
   },
   {
@@ -136,18 +133,22 @@ const projects = [
   }
 ];
 
-const techStack = [
+const skills = [
   {
     name: "Frontend",
-    items: ["React", "TypeScript", "Tailwind CSS", "Next.js"]
+    items: ["Angular", "Vue", "React", "TypeScript", "AG Grid", "Tailwind CSS"]
   },
   {
     name: "Backend",
-    items: ["Node.js", "Go", "PostgreSQL", "Redis"]
+    items: ["Java", "Kotlin", "PostgreSQL", "Gradle"]
   },
   {
     name: "DevOps",
-    items: ["Docker", "Kubernetes", "AWS", "CI/CD"]
+    items: ["Docker", "Kubernetes", "Jenkins"]
+  },
+  {
+    name: "Business Intelligence",
+    items: ["Qlik Sense", "Microsoft SQL"]
   }
 ];
 
