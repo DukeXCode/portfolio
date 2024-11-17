@@ -1,5 +1,6 @@
-import {Code, ExternalLink, Mail, Terminal} from 'lucide-react';
+import {Code, Mail, Terminal} from 'lucide-react';
 import {SiGithub} from "@icons-pack/react-simple-icons";
+import ProjectCard, {Project} from "./ProjectCard.tsx";
 
 const LandingPage = () => {
   return (
@@ -39,31 +40,7 @@ const LandingPage = () => {
           </h2>
           <div className="grid gap-6">
             {projects.map((project, index) => (
-              <div key={index} className="p-6 transition-colors bg-gray-800 rounded-lg hover:bg-gray-800/80">
-                <div className="flex items-start justify-between">
-                  <div>
-                    <h3 className="text-xl font-semibold text-white">
-                      {project.name}
-                    </h3>
-                    <p className="mt-2 text-gray-300">{project.description}</p>
-                  </div>
-                  <div className="flex gap-3">
-                    <a href={project.github} className="text-gray-400 hover:text-purple-400">
-                      <SiGithub className="w-5 h-5" />
-                    </a>
-                    <a href={project.demo} className="text-gray-400 hover:text-purple-400">
-                      <ExternalLink className="w-5 h-5" />
-                    </a>
-                  </div>
-                </div>
-                <div className="flex flex-wrap gap-2 mt-4">
-                  {project.tech.map((tech, techIndex) => (
-                    <span key={techIndex} className="px-3 py-1 text-sm text-purple-300 bg-purple-900/30 rounded-full">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
+              <ProjectCard key={index} project={project} />
             ))}
           </div>
         </div>
@@ -109,12 +86,12 @@ const LandingPage = () => {
 };
 
 // Data
-const projects = [
+const projects: Project[] = [
   {
     name: "Flag Quiz",
     description: "Improve your flag knowledge with an intelligent quiz",
     tech: ["Angular", "TypeScript", "Supabase", "Docker", "Nginx"],
-    github: "#",
+    github: "",
     demo: "https://flag-quiz.dukex.ch/"
   },
   {
@@ -122,14 +99,14 @@ const projects = [
     description: "An elegant solution for saving cloud storage developed at a hackathon",
     tech: ["Vue", "TypeScript", "Java", "Spring Boot", "Microsoft SQL", "Docker"],
     github: "https://github.com/jzelAdmin2006/Hackathon2023-CloudCondense",
-    demo: "#"
+    demo: ""
   },
   {
     name: "Portfolio",
     description: "The site your currently looking at",
     tech: ["React", "TypeScript", "Tailwind CSS"],
     github: "https://github.com/DukeXCode/portfolio",
-    demo: "#"
+    demo: ""
   }
 ];
 
