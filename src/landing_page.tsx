@@ -18,9 +18,9 @@ const LandingPage = () => {
       </nav>
 
       {/* Hero Section */}
-      <div className="px-6 py-24 mx-auto max-w-4xl">
-        <div className="space-y-6">
-          <div className="font-mono text-purple-400">~/portfolio $</div>
+      <div className="px-6 py-12">
+        <div className="space-y-6 mx-auto max-w-4xl">
+          <div className="font-mono text-2xl text-purple-400">~/portfolio $</div>
           <h1 className="text-4xl font-bold text-white">
             Naïm Giger
           </h1>
@@ -34,7 +34,7 @@ const LandingPage = () => {
       {/* Projects Section */}
       <div className="px-6 py-12">
         <div className="mx-auto max-w-4xl">
-          <h2 className="mb-8 font-mono text-2xl text-white">
+          <h2 className="mb-8 font-mono text-2xl text-purple-400">
             ~/projects $
           </h2>
           <div className="grid gap-6">
@@ -72,7 +72,7 @@ const LandingPage = () => {
       {/* Skills Section */}
       <div className="px-6 py-12">
         <div className="mx-auto max-w-4xl">
-          <h2 className="mb-8 font-mono text-2xl text-white">
+          <h2 className="mb-8 font-mono text-2xl text-purple-400">
             ~/skills $
           </h2>
           <div className="grid grid-cols-2 gap-6 md:grid-cols-3">
