@@ -25,7 +25,7 @@ const LandingPage = () => {
             Naïm Giger
           </h1>
           <p className="text-xl text-gray-300">
-            Building scalable applications with modern tech stacks.
+            Building scalable applications with modern tech stacks.<br/>
             Currently working with TypeScript, React and Node.js.
           </p>
         </div>
@@ -129,11 +129,11 @@ const projects = [
 const skills = [
   {
     name: "Frontend",
-    items: ["Angular", "Vue", "React", "TypeScript", "AG Grid", "Tailwind CSS"]
+    items: ["Angular", "Vue", "React", "TypeScript", "Node.js", "AG Grid", "Tailwind CSS"]
   },
   {
     name: "Backend",
-    items: ["Java", "Kotlin", "PostgreSQL", "Gradle"]
+    items: ["Java", "Kotlin", "Spring Boot", "PostgreSQL", "Gradle"]
   },
   {
     name: "DevOps",
@@ -142,7 +142,11 @@ const skills = [
   {
     name: "Business Intelligence",
     items: ["Qlik Sense", "Microsoft SQL"]
-  }
+  },
+  {
+    name: "Mobile Apps",
+    items: ["Ionic", "Capacitor"]
+  },
 ];
 
 export default LandingPage;
