@@ -1,4 +1,4 @@
-import {Code, Mail, Terminal} from 'lucide-react';
+import {Code, Terminal} from 'lucide-react';
 import {SiGithub} from "@icons-pack/react-simple-icons";
 import ProjectCard, {Project} from "./ProjectCard.tsx";
 
@@ -12,10 +12,6 @@ const LandingPage = () => {
           <a href="https://github.com/DukeXCode"
              className="p-2 text-gray-400 rounded-lg hover:text-purple-400 hover:bg-gray-800">
             <SiGithub className="w-5 h-5"/>
-          </a>
-          <a href="mailto:naim.giger@outlook.com"
-             className="p-2 text-gray-400 rounded-lg hover:text-purple-400 hover:bg-gray-800">
-            <Mail className="w-5 h-5"/>
           </a>
         </div>
       </nav>
