@@ -121,7 +121,7 @@ const skills = [
   },
   {
     name: "DevOps",
-    items: ["Docker", "Kubernetes", "Jenkins"]
+    items: ["Docker", "Kubernetes", "Jenkins", "Linux"]
   },
   {
     name: "Business Intelligence",
