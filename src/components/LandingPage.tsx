@@ -1,8 +1,11 @@
 import {Code, Terminal} from 'lucide-react';
 import {SiGithub} from "@icons-pack/react-simple-icons";
 import ProjectCard, {Project} from "./ProjectCard.tsx";
+import {useTranslation} from "react-i18next";
 
 const LandingPage = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen bg-gray-900">
       {/* Minimal Navigation */}
@@ -24,8 +27,8 @@ const LandingPage = () => {
             Naïm Giger
           </h1>
           <p className="text-xl text-gray-300">
-            Building scalable applications with modern tech stacks.<br/>
-            Currently working with TypeScript, React and Node.js.
+            {t('slogan')}<br/>
+            {t('currently')}
           </p>
         </div>
       </div>
