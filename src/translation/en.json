@@ -1,4 +1,7 @@
 {
   "slogan": "Building scalable applications with modern tech stacks.",
-  "currently": "Currently working with TypeScript, React and Node.js."
+  "currently": "Currently working with TypeScript, React and Node.js.",
+  "flagQuizDescription": "Improve your flag knowledge with an intelligent quiz",
+  "cloudCondenseDescription": "An elegant solution for saving cloud storage developed at a hackathon",
+  "portfolioDescription": "The site your currently looking at"
 }

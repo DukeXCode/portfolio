@@ -92,21 +92,21 @@ const LandingPage = () => {
 const projects: Project[] = [
   {
     name: "Flag Quiz",
-    description: "Improve your flag knowledge with an intelligent quiz",
+    descriptionKey: "flagQuizDescription",
     tech: ["Angular", "TypeScript", "Supabase", "Docker", "Nginx"],
     github: "",
     demo: "https://flag-quiz.dukex.ch/"
   },
   {
     name: "Cloud Condense",
-    description: "An elegant solution for saving cloud storage developed at a hackathon",
+    descriptionKey: "cloudCondenseDescription",
     tech: ["Vue", "TypeScript", "Java", "Spring Boot", "Microsoft SQL", "Docker"],
     github: "https://github.com/jzelAdmin2006/Hackathon2023-CloudCondense",
     demo: ""
   },
   {
     name: "Portfolio",
-    description: "The site your currently looking at",
+    descriptionKey: "portfolioDescription",
     tech: ["React", "TypeScript", "Tailwind CSS"],
     github: "https://github.com/DukeXCode/portfolio",
     demo: ""
