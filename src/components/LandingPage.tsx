@@ -120,11 +120,11 @@ const projects: Project[] = [
 const skills = [
   {
     name: "Frontend",
-    items: ["Angular", "Vue", "React", "TypeScript", "Node.js", "AG Grid", "Tailwind CSS"]
+    items: ["Angular", "React", "TypeScript", "Node.js", "Tailwind CSS"]
   },
   {
     name: "Backend",
-    items: ["Java", "Kotlin", "Spring Boot", "PostgreSQL", "Gradle"]
+    items: ["Java", "Kotlin", "Spring Boot", "PostgreSQL", "SQLite", "Gradle"]
   },
   {
     name: "DevOps",
@@ -136,7 +136,7 @@ const skills = [
   },
   {
     name: "Mobile Apps",
-    items: ["Ionic", "Capacitor"]
+    items: ["Ionic", "Capacitor", "React Native"]
   },
 ];
 
