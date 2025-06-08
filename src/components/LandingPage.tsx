@@ -98,8 +98,8 @@ const projects: Project[] = [
     name: "Flag Quiz",
     descriptionKey: "flagQuizDescription",
     tech: ["Angular", "TypeScript", "Supabase", "Docker", "Nginx"],
-    github: "",
-    demo: "https://flag-quiz.dukex.ch/"
+    github: "https://github.com/DukeXCode/flag-quiz-frontend",
+    demo: "https://flag-quiz.dukex.dev"
   },
   {
     name: "Cloud Condense",
