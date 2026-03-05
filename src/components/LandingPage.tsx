@@ -97,7 +97,7 @@ const projects: Project[] = [
   {
     name: "Flag Quiz",
     descriptionKey: "flagQuizDescription",
-    tech: ["Angular", "TypeScript", "Supabase", "Docker", "Nginx"],
+    tech: ["Angular", "TypeScript", "Go", "SQLite", "Docker", "Nginx"],
     github: "https://github.com/DukeXCode/flag-quiz-frontend",
     demo: "https://flag-quiz.dukex.dev"
   },
