@@ -102,6 +102,13 @@ const projects: Project[] = [
     demo: "https://flag-quiz.dukex.dev"
   },
   {
+    name: "E-ID Demo",
+    descriptionKey: "eIdDescription",
+    tech: ["React Native", "TypeScript", "Python"],
+    github: "https://github.com/DukeXCode/e-id-demo",
+    demo: ""
+  },
+  {
     name: "Cloud Condense",
     descriptionKey: "cloudCondenseDescription",
     tech: ["Vue", "TypeScript", "Java", "Spring Boot", "Microsoft SQL", "Docker"],
