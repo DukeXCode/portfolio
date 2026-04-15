@@ -131,7 +131,7 @@ const skills = [
   },
   {
     name: "Backend",
-    items: ["Java", "Kotlin", "Spring Boot", "PostgreSQL", "SQLite", "Gradle"]
+    items: ["Java", "Kotlin", "Python", "Spring Boot", "PostgreSQL", "SQLite", "Gradle"]
   },
   {
     name: "DevOps",
