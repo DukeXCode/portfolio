@@ -1,0 +1,149 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import { useTranslations } from '../../i18n/index';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'de' } },
+  ];
+}
+
+const { lang } = Astro.params;
+const t = useTranslations(lang);
+const otherLang = lang === 'en' ? 'de' : 'en';
+
+const projects = [
+  {
+    name: "Flag Quiz",
+    description: t('flagQuizDescription'),
+    tech: ["Angular", "TypeScript", "Go", "SQLite", "Docker", "Nginx"],
+    github: "https://github.com/DukeXCode/flag-quiz-frontend",
+    demo: "https://flag-quiz.dukex.dev"
+  },
+  {
+    name: "E-ID Demo",
+    description: t('eIdDescription'),
+    tech: ["React Native", "TypeScript", "Python"],
+    github: "https://github.com/DukeXCode/e-id-demo",
+    demo: ""
+  },
+  {
+    name: "Cloud Condense",
+    description: t('cloudCondenseDescription'),
+    tech: ["Vue", "TypeScript", "Java", "Spring Boot", "Microsoft SQL", "Docker"],
+    github: "https://github.com/jzelAdmin2006/Hackathon2023-CloudCondense",
+    demo: ""
+  },
+  {
+    name: "Portfolio",
+    description: t('portfolioDescription'),
+    tech: ["Astro", "TypeScript", "Tailwind CSS"],
+    github: "https://github.com/DukeXCode/portfolio",
+    demo: ""
+  }
+];
+
+const skills = [
+  {
+    name: "Frontend",
+    items: ["Angular", "React", "TypeScript", "Node.js", "Tailwind CSS"]
+  },
+  {
+    name: "Backend",
+    items: ["Java", "Kotlin", "Python", "Spring Boot", "PostgreSQL", "SQLite", "Gradle"]
+  },
+  {
+    name: "DevOps",
+    items: ["Docker", "Kubernetes", "Jenkins", "Linux"]
+  },
+  {
+    name: "Business Intelligence",
+    items: ["Qlik Sense", "Microsoft SQL"]
+  },
+  {
+    name: "Mobile Apps",
+    items: ["Ionic", "Capacitor", "React Native"]
+  },
+];
+---
+
+<Layout title="Naïm Giger - Portfolio">
+  <!-- Navigation -->
+  <nav class="flex items-center justify-between p-6">
+    <div class="font-mono text-xl text-purple-500">&gt; dukex</div>
+    <div class="flex gap-4">
+      <a href={`/${otherLang}/`} class="p-2 text-gray-400 rounded-lg hover:text-purple-400 hover:bg-gray-800" title="Switch language">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/>
+        </svg>
+      </a>
+      <a href="https://github.com/DukeXCode" class="p-2 text-gray-400 rounded-lg hover:text-purple-400 hover:bg-gray-800">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-label="GitHub">
+          <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+        </svg>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <div class="px-6 py-12">
+    <div class="space-y-6 mx-auto max-w-4xl">
+      <div class="font-mono text-2xl text-purple-400">~/portfolio $</div>
+      <h1 class="text-4xl font-bold text-white">Naïm Giger</h1>
+      <p class="text-xl text-gray-300">
+        {t('slogan')}<br />
+        {t('currently')}
+      </p>
+    </div>
+  </div>
+
+  <!-- Projects -->
+  <div class="px-6 py-12">
+    <div class="mx-auto max-w-4xl">
+      <h2 class="mb-8 font-mono text-2xl text-purple-400">~/projects $</h2>
+      <div class="grid gap-6">
+        {projects.map(project => (
+          <ProjectCard project={project} />
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <!-- Skills -->
+  <div class="px-6 py-12">
+    <div class="mx-auto max-w-4xl">
+      <h2 class="mb-8 font-mono text-2xl text-purple-400">~/skills $</h2>
+      <div class="grid grid-cols-2 gap-6 md:grid-cols-3">
+        {skills.map(category => (
+          <div class="p-4 bg-gray-800 rounded-lg">
+            <h3 class="text-lg font-semibold text-purple-400">{category.name}</h3>
+            <ul class="mt-2 space-y-1 text-gray-300">
+              {category.items.map(item => (
+                <li class="flex items-center gap-2">
+                  <svg class="w-4 h-4 flex-shrink-0 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+                  </svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="px-6 py-8">
+    <div class="mx-auto max-w-4xl">
+      <div class="flex items-center justify-between pt-8 mt-8 border-t border-gray-800">
+        <div class="font-mono text-gray-400">Made with Astro & Tailwind CSS</div>
+        <svg class="w-5 h-5 text-purple-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="4 17 10 11 4 5"/><line x1="12" x2="20" y1="19" y2="19"/>
+        </svg>
+      </div>
+    </div>
+  </footer>
+</Layout>
