@@ -16,28 +16,28 @@ const otherLang = lang === 'en' ? 'de' : 'en';
 
 const projects = [
   {
-    name: "Flag Quiz",
+    name: "flag-quiz",
     description: t('flagQuizDescription'),
     tech: ["Angular", "TypeScript", "Go", "SQLite", "Docker", "Nginx"],
     github: "https://github.com/DukeXCode/flag-quiz-frontend",
     demo: ""
   },
   {
-    name: "E-ID Demo",
+    name: "e-id-demo",
     description: t('eIdDescription'),
     tech: ["React Native", "TypeScript", "Python"],
     github: "https://github.com/DukeXCode/e-id-demo",
     demo: ""
   },
   {
-    name: "Cloud Condense",
+    name: "cloud-condense",
     description: t('cloudCondenseDescription'),
     tech: ["Vue", "TypeScript", "Java", "Spring Boot", "Microsoft SQL", "Docker"],
     github: "https://github.com/jzelAdmin2006/Hackathon2023-CloudCondense",
     demo: ""
   },
   {
-    name: "Portfolio",
+    name: "portfolio",
     description: t('portfolioDescription'),
     tech: ["Astro", "TypeScript", "Tailwind CSS"],
     github: "https://github.com/DukeXCode/portfolio",
@@ -47,103 +47,270 @@ const projects = [
 
 const skills = [
   {
-    name: "Frontend",
+    name: "FRONTEND",
     items: ["Angular", "React", "TypeScript", "Node.js", "Tailwind CSS"]
   },
   {
-    name: "Backend",
+    name: "BACKEND",
     items: ["Java", "Kotlin", "Python", "Spring Boot", "PostgreSQL", "SQLite", "Gradle"]
   },
   {
-    name: "DevOps",
+    name: "DEVOPS",
     items: ["Docker", "Kubernetes", "Jenkins", "Linux"]
   },
   {
-    name: "Business Intelligence",
+    name: "BI",
     items: ["Qlik Sense", "Microsoft SQL"]
   },
   {
-    name: "Mobile Apps",
+    name: "MOBILE",
     items: ["Ionic", "Capacitor", "React Native"]
   },
 ];
 ---
 
-<Layout title="Naïm Giger - Portfolio">
-  <!-- Navigation -->
-  <nav class="flex items-center justify-between p-6">
-    <div class="font-mono text-xl text-purple-500">&gt; dukex</div>
-    <div class="flex gap-4">
-      <a href={`/${otherLang}/`} class="p-2 text-gray-500 rounded-lg transition-all duration-200 hover:text-purple-400 hover:bg-gray-800/80" title="Switch language">
-        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/>
-        </svg>
-      </a>
-      <a href="https://github.com/DukeXCode" class="p-2 text-gray-500 rounded-lg transition-all duration-200 hover:text-purple-400 hover:bg-gray-800/80">
-        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-label="GitHub">
-          <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
-        </svg>
-      </a>
-    </div>
-  </nav>
-
-  <!-- Hero -->
-  <div class="px-6 py-12">
-    <div class="space-y-6 mx-auto max-w-4xl">
-      <div class="font-mono text-2xl text-purple-400">~/portfolio $</div>
-      <h1 class="text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight">Naïm Giger</h1>
-      <p class="text-lg md:text-xl text-gray-400 leading-relaxed">
-        {t('slogan')}<br />
-        {t('currently')}
-      </p>
-    </div>
-  </div>
-
-  <!-- Projects -->
-  <div class="px-6 py-12">
-    <div class="mx-auto max-w-4xl">
-      <h2 class="mb-8 font-mono text-2xl text-purple-400">~/projects $</h2>
-      <div class="grid gap-6">
-        {projects.map(project => (
-          <ProjectCard project={project} />
-        ))}
+<Layout title="Naïm Giger — Portfolio">
+  <!-- Boot Screen -->
+  <div class="boot-screen" id="boot">
+    <div class="max-w-lg w-full px-8">
+      <div class="text-center mb-10">
+        <pre class="text-neon-purple text-[8px] sm:text-[10px] leading-tight font-mono" style="text-shadow: 0 0 20px rgba(168,85,247,0.3);">
+╔══════════════════════════════════╗
+║        MAINFRAME v2.0            ║
+║     NEØN TERMINAL SUITE          ║
+╚══════════════════════════════════╝</pre>
+      </div>
+      <div class="space-y-2 font-mono text-xs">
+        <div class="text-neon-green" style="animation: boot-line 0.5s ease-out forwards;">
+          <span class="text-neon-dim">[</span><span class="text-neon-green">  OK  </span><span class="text-neon-dim">]</span> Initializing system...
+        </div>
+        <div class="text-neon-green opacity-0" style="animation: boot-line 0.5s ease-out 0.4s forwards;">
+          <span class="text-neon-dim">[</span><span class="text-neon-green">  OK  </span><span class="text-neon-dim">]</span> Loading kernel modules...
+        </div>
+        <div class="text-neon-green opacity-0" style="animation: boot-line 0.5s ease-out 0.8s forwards;">
+          <span class="text-neon-dim">[</span><span class="text-neon-green">  OK  </span><span class="text-neon-dim">]</span> Mounting filesystems...
+        </div>
+        <div class="text-neon-green opacity-0" style="animation: boot-line 0.5s ease-out 1.2s forwards;">
+          <span class="text-neon-dim">[</span><span class="text-neon-green">  OK  </span><span class="text-neon-dim">]</span> Establishing secure channel...
+        </div>
+        <div class="text-neon-purple opacity-0" style="animation: boot-line 0.5s ease-out 1.6s forwards;">
+          <span class="text-neon-dim">[</span><span class="text-neon-purple">AUTH</span><span class="text-neon-dim">]</span> Authenticating user: dukex
+        </div>
+        <div class="opacity-0" style="animation: boot-line 0.5s ease-out 2.2s forwards;">
+          <span class="text-neon-dim">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
+        </div>
+        <div class="text-neon-text opacity-0" style="animation: boot-line 0.5s ease-out 2.6s forwards;">
+          <span class="text-neon-cyan">$</span> <span class="text-neon-text/80">Welcome, dukex. Type <span class="text-neon-purple">help</span> for available commands.</span>
+        </div>
+        <div class="opacity-0" style="animation: boot-line 0.3s ease-out 3.2s forwards;">
+          <span class="text-neon-cyan">$</span> <span class="animate-blink text-neon-text">_</span>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- Skills -->
-  <div class="px-6 py-12">
-    <div class="mx-auto max-w-4xl">
-      <h2 class="mb-8 font-mono text-2xl text-purple-400">~/skills $</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {skills.map(category => (
-          <div class="p-5 bg-gray-800/50 rounded-xl border border-gray-700/30 transition-all duration-300 hover:border-purple-500/30 hover:bg-gray-800/70">
-            <h3 class="text-base font-semibold text-purple-400 tracking-tight">{category.name}</h3>
-            <ul class="mt-3 space-y-2">
-              {category.items.map(item => (
-                <li class="flex items-center gap-2.5 text-gray-400">
-                  <svg class="w-3.5 h-3.5 flex-shrink-0 text-purple-500/60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
-                  </svg>
-                  <span class="text-sm">{item}</span>
-                </li>
-              ))}
-            </ul>
+  <!-- Main Content -->
+  <div class="relative grid-bg min-h-screen">
+    <!-- Background Particles -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden">
+      <div class="data-particle" style="top:15%;left:10%;animation:particle 5s ease-in-out infinite;animation-delay:0s"></div>
+      <div class="data-particle" style="top:45%;left:85%;animation:particle 7s ease-in-out infinite;animation-delay:1s"></div>
+      <div class="data-particle" style="top:75%;left:20%;animation:particle 6s ease-in-out infinite;animation-delay:2s"></div>
+      <div class="data-particle" style="top:25%;left:75%;animation:particle 8s ease-in-out infinite;animation-delay:0.5s"></div>
+      <div class="data-particle" style="top:60%;left:50%;animation:particle 5.5s ease-in-out infinite;animation-delay:1.5s"></div>
+      <div class="data-particle" style="top:85%;left:70%;animation:particle 6.5s ease-in-out infinite;animation-delay:2.5s"></div>
+    </div>
+
+    <!-- Navigation / Status Bar -->
+    <nav class="relative z-10 flex items-center justify-between px-6 py-3 border-b border-neon-border/50">
+      <div class="flex items-center gap-4">
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-neon-green animate-glow-pulse-fast"></span>
+          <span class="font-mono text-xs text-neon-green/70">ONLINE</span>
+        </div>
+        <span class="font-mono text-xs text-neon-dim hidden sm:inline">
+          <span class="text-neon-cyan">dukex</span>@<span class="text-neon-purple">mainframe</span>:<span class="text-neon-amber">~</span>
+        </span>
+      </div>
+      <div class="flex items-center gap-4">
+        <span class="font-mono text-[10px] text-neon-dim/50 hidden sm:inline" id="clock">SYS: 00:00:00</span>
+        <a href={`/${otherLang}/`} class="px-2 py-1 font-mono text-[10px] text-neon-dim border border-neon-border transition-all duration-300 hover:text-neon-cyan hover:border-neon-cyan/30 hover:glow-box-cyan" title="Switch language">
+          <span class="text-neon-cyan">&gt;</span> {otherLang}
+        </a>
+        <a href="https://github.com/DukeXCode" class="p-1.5 text-neon-dim transition-colors duration-300 hover:text-neon-purple">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-label="GitHub">
+            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+          </svg>
+        </a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative z-10 px-6 pt-16 pb-12">
+      <div class="mx-auto max-w-5xl">
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
+          <div class="lg:col-span-3 space-y-6">
+            <div class="font-mono text-xs text-neon-cyan/60 animate-fade-in" style="animation-delay: 0.2s">
+              <span class="text-neon-purple">~/</span> $ <span class="text-neon-dim">cat welcome.txt</span>
+            </div>
+            <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-black text-neon-text leading-none tracking-wide animate-fade-in" style="animation-delay: 0.4s">
+              <span class="glow-purple block">NAÏM</span>
+              <span class="block text-neon-text/90">GIGER</span>
+            </h1>
+            <div class="font-mono text-sm text-neon-dim/90 leading-relaxed animate-fade-in" style="animation-delay: 0.6s">
+              <span class="text-neon-purple">></span> {t('slogan')}
+            </div>
+            <div class="font-mono text-xs text-neon-dim/60 animate-fade-in" style="animation-delay: 0.8s">
+              <span class="text-neon-purple">></span> {t('currently')}
+            </div>
           </div>
-        ))}
+
+          <!-- System Info Panel -->
+          <div class="lg:col-span-2 animate-slide-up opacity-0" style="animation-delay: 1s">
+            <div class="border border-neon-border/50 bg-neon-surface/40 p-4 glow-box-purple">
+              <div class="flex items-center gap-2 mb-4 pb-3 border-b border-neon-border/30">
+                <div class="flex gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-neon-red"></span>
+                  <span class="w-2 h-2 rounded-full bg-neon-amber"></span>
+                  <span class="w-2 h-2 rounded-full bg-neon-green"></span>
+                </div>
+                <span class="font-mono text-[10px] text-neon-dim/60 uppercase tracking-widest">system info</span>
+              </div>
+              <div class="space-y-2 font-mono text-[11px]">
+                <div class="flex justify-between">
+                  <span class="text-neon-dim">USER</span>
+                  <span class="text-neon-text">dukex</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-neon-dim">HOST</span>
+                  <span class="text-neon-cyan">mainframe.local</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-neon-dim">OS</span>
+                  <span class="text-neon-text">PortfolioOS / v2.0</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-neon-dim">SHELL</span>
+                  <span class="text-neon-text">/bin/neon-zsh</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-neon-dim">UPTIME</span>
+                  <span class="text-neon-green">∞</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-neon-dim">LOCALE</span>
+                  <span class="text-neon-text">{lang === 'en' ? 'en_US.UTF-8' : 'de_CH.UTF-8'}</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-neon-dim">NET</span>
+                  <span class="text-neon-green">● connected</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
+
+    <!-- Sections Separator -->
+    <div class="relative z-10 mx-auto max-w-5xl px-6">
+      <div class="border-t border-neon-border/30"></div>
     </div>
+
+    <!-- Projects Section -->
+    <section class="relative z-10 px-6 py-12">
+      <div class="mx-auto max-w-5xl">
+        <div class="flex items-center gap-3 mb-8">
+          <span class="font-mono text-xs text-neon-cyan/60">~/projects</span>
+          <span class="font-mono text-xs text-neon-purple">$</span>
+          <span class="font-mono text-xs text-neon-dim">ls -la</span>
+          <span class="animate-blink text-neon-cyan text-xs">▊</span>
+        </div>
+        <div class="grid gap-4">
+          {projects.map((project, i) => (
+            <div class="opacity-0 animate-slide-up" style={`animation-delay: ${0.1 * i}s`}>
+              <ProjectCard project={project} />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Sections Separator -->
+    <div class="relative z-10 mx-auto max-w-5xl px-6">
+      <div class="border-t border-neon-border/30"></div>
+    </div>
+
+    <!-- Skills Section -->
+    <section class="relative z-10 px-6 py-12">
+      <div class="mx-auto max-w-5xl">
+        <div class="flex items-center gap-3 mb-8">
+          <span class="font-mono text-xs text-neon-cyan/60">~/skills</span>
+          <span class="font-mono text-xs text-neon-purple">$</span>
+          <span class="font-mono text-xs text-neon-dim">ps aux | grep runtime</span>
+          <span class="animate-blink text-neon-cyan text-xs">▊</span>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {skills.map((category, i) => (
+            <div class="opacity-0 animate-slide-up border border-neon-border/40 bg-neon-surface/30 p-4 transition-all duration-500 hover:border-neon-purple/30 hover:glow-box-purple" style={`animation-delay: ${0.15 * i}s`}>
+              <div class="flex items-center justify-between mb-3 pb-2 border-b border-neon-border/20">
+                <h3 class="font-mono text-xs tracking-widest text-neon-purple/80">{category.name}</h3>
+                <span class="flex items-center gap-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-neon-green animate-glow-pulse-fast"></span>
+                  <span class="font-mono text-[9px] text-neon-green/60">RUNNING</span>
+                </span>
+              </div>
+              <ul class="space-y-1.5">
+                {category.items.map(item => (
+                  <li class="flex items-center gap-2">
+                    <span class="font-mono text-[10px] text-neon-dim/40">PID.{item.length.toString().padStart(3, '0')}</span>
+                    <span class="font-mono text-xs text-neon-text/80">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative z-10 px-6 py-8">
+      <div class="mx-auto max-w-5xl">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-6 border-t border-neon-border/30">
+          <div class="flex items-center gap-2">
+            <span class="font-mono text-xs text-neon-cyan">~/</span>
+            <span class="font-mono text-xs text-neon-purple">$</span>
+            <span class="animate-blink text-neon-cyan text-xs">_</span>
+          </div>
+          <div class="flex items-center gap-4 font-mono text-[10px] text-neon-dim/50">
+            <span>BUILD: 2026.05.13</span>
+            <span>STACK: ASTRO + TAILWIND</span>
+          </div>
+        </div>
+      </div>
+    </footer>
   </div>
 
-  <!-- Footer -->
-  <footer class="px-6 py-8">
-    <div class="mx-auto max-w-4xl">
-      <div class="flex items-center justify-between pt-8 mt-8 border-t border-gray-800">
-        <div class="font-mono text-gray-400">Made with Astro & Tailwind CSS</div>
-        <svg class="w-5 h-5 text-purple-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="4 17 10 11 4 5"/><line x1="12" x2="20" y1="19" y2="19"/>
-        </svg>
-      </div>
-    </div>
-  </footer>
+  <script>
+    const bootScreen = document.getElementById('boot');
+    if (bootScreen) {
+      setTimeout(() => {
+        bootScreen.classList.add('hidden');
+      }, 4200);
+    }
+
+    const clock = document.getElementById('clock');
+    if (clock) {
+      function updateClock() {
+        const now = new Date();
+        const h = String(now.getHours()).padStart(2, '0');
+        const m = String(now.getMinutes()).padStart(2, '0');
+        const s = String(now.getSeconds()).padStart(2, '0');
+        clock.textContent = `SYS: ${h}:${m}:${s}`;
+      }
+      updateClock();
+      setInterval(updateClock, 1000);
+    }
+  </script>
 </Layout>
