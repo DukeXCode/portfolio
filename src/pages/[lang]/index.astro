@@ -87,15 +87,15 @@ const skills = [
       <div class="flex items-center gap-4">
         <div class="flex items-center gap-2">
           <span class="w-2 h-2 rounded-full bg-neon-green animate-glow-pulse-fast"></span>
-          <span class="font-mono text-xs text-neon-green/70">ONLINE</span>
+          <span class="font-mono text-xs sm:text-sm text-neon-green/70">ONLINE</span>
         </div>
-        <span class="font-mono text-xs text-neon-dim hidden sm:inline">
-          <span class="text-neon-cyan">dukex</span>@<span class="text-neon-purple">mainframe</span>:<span class="text-neon-amber">~</span>
-        </span>
+          <span class="font-mono text-xs sm:text-sm text-neon-dim hidden sm:inline">
+            <span class="text-neon-cyan">dukex</span>@<span class="text-neon-purple">mainframe</span>:<span class="text-neon-amber">~</span>
+          </span>
       </div>
       <div class="flex items-center gap-4">
-        <span class="font-mono text-[10px] text-neon-dim/50 hidden sm:inline" id="clock">SYS: 00:00:00</span>
-        <a href={`/${otherLang}/`} class="px-2 py-1 font-mono text-[10px] text-neon-dim border border-neon-border transition-all duration-300 hover:text-neon-cyan hover:border-neon-cyan/30 hover:glow-box-cyan" title="Switch language">
+        <span class="font-mono text-xs sm:text-sm text-neon-dim/50 hidden sm:inline" id="clock">SYS: 00:00:00</span>
+        <a href={`/${otherLang}/`} class="px-2 py-1 font-mono text-xs sm:text-sm text-neon-dim border border-neon-border transition-all duration-300 hover:text-neon-cyan hover:border-neon-cyan/30 hover:glow-box-cyan" title="Switch language">
           <span class="text-neon-cyan">&gt;</span> {otherLang}
         </a>
         <a href="https://github.com/DukeXCode" class="p-1.5 text-neon-dim transition-colors duration-300 hover:text-neon-purple">
@@ -111,17 +111,17 @@ const skills = [
       <div class="mx-auto max-w-5xl">
         <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
           <div class="lg:col-span-3 space-y-6">
-            <div class="font-mono text-xs text-neon-cyan/60 animate-fade-in" style="animation-delay: 0.2s">
+            <div class="font-mono text-sm text-neon-cyan/60 animate-fade-in" style="animation-delay: 0.2s">
               <span class="text-neon-purple">~/</span> $ <span class="text-neon-dim">cat welcome.txt</span>
             </div>
             <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-black text-neon-text leading-none tracking-wide animate-fade-in" style="animation-delay: 0.4s">
               <span class="glow-purple block">NAÏM</span>
               <span class="block text-neon-text/90">GIGER</span>
             </h1>
-            <div class="font-mono text-sm text-neon-dim/90 leading-relaxed animate-fade-in" style="animation-delay: 0.6s">
+            <div class="font-mono text-sm sm:text-base text-neon-dim/90 leading-relaxed animate-fade-in" style="animation-delay: 0.6s">
               <span class="text-neon-purple">></span> {t('slogan')}
             </div>
-            <div class="font-mono text-xs text-neon-dim/60 animate-fade-in" style="animation-delay: 0.8s">
+            <div class="font-mono text-sm text-neon-dim/60 animate-fade-in" style="animation-delay: 0.8s">
               <span class="text-neon-purple">></span> {t('currently')}
             </div>
           </div>
@@ -135,9 +135,9 @@ const skills = [
                   <span class="w-2 h-2 rounded-full bg-neon-amber"></span>
                   <span class="w-2 h-2 rounded-full bg-neon-green"></span>
                 </div>
-                <span class="font-mono text-[10px] text-neon-dim/60 uppercase tracking-widest">system info</span>
+                <span class="font-mono text-xs sm:text-sm text-neon-dim/60 uppercase tracking-widest">system info</span>
               </div>
-              <div class="space-y-2 font-mono text-[11px]">
+              <div class="space-y-2 font-mono text-xs sm:text-sm">
                 <div class="flex justify-between">
                   <span class="text-neon-dim">USER</span>
                   <span class="text-neon-text">dukex</span>
@@ -182,10 +182,9 @@ const skills = [
     <section class="relative z-10 px-6 py-12">
       <div class="mx-auto max-w-5xl">
         <div class="flex items-center gap-3 mb-8">
-          <span class="font-mono text-xs text-neon-cyan/60">~/projects</span>
-          <span class="font-mono text-xs text-neon-purple">$</span>
-          <span class="font-mono text-xs text-neon-dim">ls -la</span>
-          <span class="animate-blink text-neon-cyan text-xs">▊</span>
+          <span class="font-mono text-sm text-neon-cyan/60">~/projects</span>
+          <span class="font-mono text-sm text-neon-purple">$</span>
+          <span class="font-mono text-sm text-neon-dim">ls -la</span>
         </div>
         <div class="grid gap-4">
           {projects.map((project, i) => (
@@ -206,26 +205,25 @@ const skills = [
     <section class="relative z-10 px-6 py-12">
       <div class="mx-auto max-w-5xl">
         <div class="flex items-center gap-3 mb-8">
-          <span class="font-mono text-xs text-neon-cyan/60">~/skills</span>
-          <span class="font-mono text-xs text-neon-purple">$</span>
-          <span class="font-mono text-xs text-neon-dim">ps aux | grep runtime</span>
-          <span class="animate-blink text-neon-cyan text-xs">▊</span>
+          <span class="font-mono text-sm text-neon-cyan/60">~/skills</span>
+          <span class="font-mono text-sm text-neon-purple">$</span>
+          <span class="font-mono text-sm text-neon-dim">ps aux | grep runtime</span>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {skills.map((category, i) => (
             <div class="opacity-0 animate-slide-up border border-neon-border/40 bg-neon-surface/30 p-4 transition-all duration-500 hover:border-neon-purple/30 hover:glow-box-purple" style={`animation-delay: ${0.15 * i}s`}>
               <div class="flex items-center justify-between mb-3 pb-2 border-b border-neon-border/20">
-                <h3 class="font-mono text-xs tracking-widest text-neon-purple/80">{category.name}</h3>
+                <h3 class="font-mono text-xs sm:text-sm tracking-widest text-neon-purple/80">{category.name}</h3>
                 <span class="flex items-center gap-1.5">
                   <span class="w-1.5 h-1.5 rounded-full bg-neon-green animate-glow-pulse-fast"></span>
-                  <span class="font-mono text-[9px] text-neon-green/60">RUNNING</span>
+                  <span class="font-mono text-[10px] sm:text-xs text-neon-green/60">RUNNING</span>
                 </span>
               </div>
               <ul class="space-y-1.5">
                 {category.items.map(item => (
                   <li class="flex items-center gap-2">
-                    <span class="font-mono text-[10px] text-neon-dim/40">PID.{item.length.toString().padStart(3, '0')}</span>
-                    <span class="font-mono text-xs text-neon-text/80">{item}</span>
+                    <span class="font-mono text-xs sm:text-sm text-neon-dim/40">PID.{item.length.toString().padStart(3, '0')}</span>
+                    <span class="font-mono text-sm text-neon-text/80">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -240,11 +238,11 @@ const skills = [
       <div class="mx-auto max-w-5xl">
         <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-6 border-t border-neon-border/30">
           <div class="flex items-center gap-2">
-            <span class="font-mono text-xs text-neon-cyan">~/</span>
-            <span class="font-mono text-xs text-neon-purple">$</span>
-            <span class="animate-blink text-neon-cyan text-xs">_</span>
+          <span class="font-mono text-xs sm:text-sm text-neon-cyan">~/</span>
+          <span class="font-mono text-xs sm:text-sm text-neon-purple">$</span>
+          <span class="animate-blink text-neon-cyan text-xs sm:text-sm">_</span>
           </div>
-          <div class="flex items-center gap-4 font-mono text-[10px] text-neon-dim/50">
+          <div class="flex items-center gap-4 font-mono text-xs sm:text-sm text-neon-dim/50">
             <span>BUILD: 2026.05.13</span>
             <span>STACK: ASTRO + TAILWIND</span>
           </div>

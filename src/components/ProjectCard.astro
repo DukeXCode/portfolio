@@ -19,11 +19,11 @@ const fileSize = `${(linesOfCode / 1000).toFixed(1)}K`;
   <div class="relative p-5 bg-neon-surface/80 border border-neon-border rounded-sm transition-all duration-500 hover:border-neon-purple/40 hover:glow-box-purple hover:-translate-y-0.5">
     <div class="flex items-start justify-between mb-3">
       <div class="flex items-center gap-3 min-w-0">
-        <span class="text-neon-purple/60 font-mono text-xs shrink-0">drwxr-xr-x</span>
+        <span class="text-neon-purple/60 font-mono text-xs sm:text-sm shrink-0">drwxr-xr-x</span>
         <h3 class="font-mono text-sm text-neon-text truncate">{project.name}</h3>
       </div>
       <div class="flex items-center gap-1 shrink-0">
-        <span class="text-[10px] text-neon-dim/60 font-mono hidden sm:inline">{fileSize}</span>
+        <span class="text-xs sm:text-sm text-neon-dim/60 font-mono hidden sm:inline">{fileSize}</span>
         {project.github && (
           <a href={project.github} class="p-1.5 text-neon-dim transition-colors duration-300 hover:text-neon-purple">
             <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor" aria-label="GitHub">
@@ -34,11 +34,11 @@ const fileSize = `${(linesOfCode / 1000).toFixed(1)}K`;
       </div>
     </div>
 
-    <p class="text-xs text-neon-dim/80 leading-relaxed mb-4 pl-[4.5rem]">{project.description}</p>
+    <p class="text-xs sm:text-sm text-neon-dim/80 leading-relaxed mb-4 pl-[4.5rem]">{project.description}</p>
 
     <div class="flex flex-wrap gap-1.5 pl-[4.5rem]">
       {project.tech.map(tech => (
-        <span class="px-2 py-0.5 text-[10px] font-mono text-neon-purple/70 bg-neon-purple/5 border border-neon-purple/10 transition-all duration-300 group-hover:bg-neon-purple/10 group-hover:border-neon-purple/20">
+        <span class="px-2 py-0.5 text-xs sm:text-sm font-mono text-neon-purple/70 bg-neon-purple/5 border border-neon-purple/10 transition-all duration-300 group-hover:bg-neon-purple/10 group-hover:border-neon-purple/20">
           {tech}
         </span>
       ))}
