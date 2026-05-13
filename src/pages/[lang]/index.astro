@@ -75,6 +75,8 @@ for (const category of skills) {
     skillsPids[item] = pid++;
   }
 }
+
+const buildDate = new Date().toISOString().split('T')[0];
 ---
 
 <Layout title="Naïm Giger — Portfolio">
@@ -251,7 +253,7 @@ for (const category of skills) {
           <span class="animate-blink text-neon-cyan text-xs sm:text-sm">_</span>
           </div>
           <div class="flex items-center gap-4 font-mono text-xs sm:text-sm text-neon-dim/50">
-            <span>BUILD: 2026.05.13</span>
+            <span>BUILD: {buildDate}</span>
             <span>STACK: ASTRO + TAILWIND</span>
           </div>
         </div>
