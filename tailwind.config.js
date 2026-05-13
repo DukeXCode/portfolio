@@ -28,7 +28,7 @@ export default {
         blink: "blink 1s step-end infinite",
         scanline: "scanline 10s linear infinite",
         float: "float 6s ease-in-out infinite",
-        "boot-line": "boot-line 0.6s ease-out forwards",
+
         "fade-in": "fade-in 0.8s ease-out forwards",
         "slide-up": "slide-up 0.6s ease-out forwards",
         "grid-scroll": "grid-scroll 20s linear infinite",
@@ -51,10 +51,7 @@ export default {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-8px)" },
         },
-        "boot-line": {
-          "0%": { opacity: "0", transform: "translateX(-20px)" },
-          "100%": { opacity: "1", transform: "translateX(0)" },
-        },
+
         "fade-in": {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },

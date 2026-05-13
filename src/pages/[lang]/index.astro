@@ -70,45 +70,6 @@ const skills = [
 ---
 
 <Layout title="Naïm Giger — Portfolio">
-  <!-- Boot Screen -->
-  <div class="boot-screen" id="boot">
-    <div class="max-w-lg w-full px-8">
-      <div class="text-center mb-10">
-        <pre class="text-neon-purple text-[8px] sm:text-[10px] leading-tight font-mono" style="text-shadow: 0 0 20px rgba(168,85,247,0.3);">
-╔══════════════════════════════════╗
-║        MAINFRAME v2.0            ║
-║     NEØN TERMINAL SUITE          ║
-╚══════════════════════════════════╝</pre>
-      </div>
-      <div class="space-y-2 font-mono text-xs">
-        <div class="text-neon-green" style="animation: boot-line 0.5s ease-out forwards;">
-          <span class="text-neon-dim">[</span><span class="text-neon-green">  OK  </span><span class="text-neon-dim">]</span> Initializing system...
-        </div>
-        <div class="text-neon-green opacity-0" style="animation: boot-line 0.5s ease-out 0.4s forwards;">
-          <span class="text-neon-dim">[</span><span class="text-neon-green">  OK  </span><span class="text-neon-dim">]</span> Loading kernel modules...
-        </div>
-        <div class="text-neon-green opacity-0" style="animation: boot-line 0.5s ease-out 0.8s forwards;">
-          <span class="text-neon-dim">[</span><span class="text-neon-green">  OK  </span><span class="text-neon-dim">]</span> Mounting filesystems...
-        </div>
-        <div class="text-neon-green opacity-0" style="animation: boot-line 0.5s ease-out 1.2s forwards;">
-          <span class="text-neon-dim">[</span><span class="text-neon-green">  OK  </span><span class="text-neon-dim">]</span> Establishing secure channel...
-        </div>
-        <div class="text-neon-purple opacity-0" style="animation: boot-line 0.5s ease-out 1.6s forwards;">
-          <span class="text-neon-dim">[</span><span class="text-neon-purple">AUTH</span><span class="text-neon-dim">]</span> Authenticating user: dukex
-        </div>
-        <div class="opacity-0" style="animation: boot-line 0.5s ease-out 2.2s forwards;">
-          <span class="text-neon-dim">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
-        </div>
-        <div class="text-neon-text opacity-0" style="animation: boot-line 0.5s ease-out 2.6s forwards;">
-          <span class="text-neon-cyan">$</span> <span class="text-neon-text/80">Welcome, dukex. Type <span class="text-neon-purple">help</span> for available commands.</span>
-        </div>
-        <div class="opacity-0" style="animation: boot-line 0.3s ease-out 3.2s forwards;">
-          <span class="text-neon-cyan">$</span> <span class="animate-blink text-neon-text">_</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- Main Content -->
   <div class="relative grid-bg min-h-screen">
     <!-- Background Particles -->
@@ -293,13 +254,6 @@ const skills = [
   </div>
 
   <script>
-    const bootScreen = document.getElementById('boot');
-    if (bootScreen) {
-      setTimeout(() => {
-        bootScreen.classList.add('hidden');
-      }, 4200);
-    }
-
     const clock = document.getElementById('clock');
     if (clock) {
       function updateClock() {

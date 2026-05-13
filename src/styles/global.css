@@ -138,22 +138,6 @@
                blink-caret 0.75s step-end infinite;
   }
 
-  .boot-screen {
-    position: fixed;
-    inset: 0;
-    z-index: 10000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #05050a;
-  }
-
-  .boot-screen.hidden {
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.5s ease-out;
-  }
-
   .data-particle {
     position: absolute;
     width: 2px;
