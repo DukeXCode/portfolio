@@ -67,6 +67,14 @@ const skills = [
     items: ["Ionic", "Capacitor", "React Native"]
   },
 ];
+
+let pid = 100;
+const skillsPids = {};
+for (const category of skills) {
+  for (const item of category.items) {
+    skillsPids[item] = pid++;
+  }
+}
 ---
 
 <Layout title="Naïm Giger — Portfolio">
@@ -222,7 +230,7 @@ const skills = [
               <ul class="space-y-1.5">
                 {category.items.map(item => (
                   <li class="flex items-center gap-2">
-                    <span class="font-mono text-xs sm:text-sm text-neon-dim/40">PID.{item.length.toString().padStart(3, '0')}</span>
+                    <span class="font-mono text-xs sm:text-sm text-neon-dim/40">PID.{skillsPids[item].toString().padStart(3, '0')}</span>
                     <span class="font-mono text-sm text-neon-text/80">{item}</span>
                   </li>
                 ))}
